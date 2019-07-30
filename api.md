@@ -45,6 +45,14 @@ Actualiza los datos registrados de un superheroe
     + Attributes (Respuesta Superheroe)
 
 
+### Borrar superheroe [DELETE]
+Borra los datos registrados de un superheroe
+
++ Request (application/json)
+
++ Response 200 (application/json)
+
+
 # Data Structures
 
 ## Error Response (object)
