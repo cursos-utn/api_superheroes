@@ -26,6 +26,9 @@ Registra un nuevo superheroe en el sistema
   
 ## Administrar un superheroe  [/superheroes/{id}]
 
+  + Parameters
+    + id: 1 (number) - Identificador del superheroe
+
 ### Obtener un superheroe [GET]
 
 Retorna el listado de superheroes registrados en el sistema
