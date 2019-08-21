@@ -11,5 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "aglio": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0",
+    "nock": "^10.0.6"
   }
 }

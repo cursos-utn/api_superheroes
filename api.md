@@ -1,55 +1,55 @@
 FORMAT: 1A
 
-# API curso NodeJS
-API REST para el manejo de superheroes.
+# API curso NodeJS - Final
+API REST para el manejo de agenda.
 
-# Group Superheroe
+# Group Agenda
 
-## Administrar superheroes [/superheroes]
+## Administrar contactos [/contactos]
 
-### Obtener superheroes [GET]
-Retorna el listado de superheroes registrados en el sistema
+### Obtener contactos [GET]
+Retorna el listado de contactos
 
 + Request (application/json)
 
 + Response 200 (application/json)
-    + Attributes (Listado Superheroes)
+    + Attributes (Listado Contactos)
 
-### Cargar nuevo superheroes [POST]
-Registra un nuevo superheroe en el sistema
+### Cargar nuevo contacto [POST]
+Agrega un contacto
 
 + Request (application/json)
-    + Attributes (Superheroe)
+    + Attributes (Contacto)
 
 + Response 200 (application/json)
-    + Attributes (Respuesta Superheroe)
+    + Attributes (Respuesta Contacto)
   
-## Administrar un superheroe  [/superheroes/{id}]
+## Administración de un contacto  [/contactos/{id}]
 
   + Parameters
-    + id: 1 (number) - Identificador del superheroe
+    + id: 1 (number) - Identificador del contacto
 
-### Obtener un superheroe [GET]
+### Obtener un contacto [GET]
 
-Retorna el listado de superheroes registrados en el sistema
+Retorna un contacto (cuyo id es pasado como parámetro)
 
 + Request (application/json)
 
 + Response 200 (application/json)
-    + Attributes (Superheroe)
+    + Attributes (Contacto Unico)
 
-### Actualizar superheroe [PUT]
-Actualiza los datos registrados de un superheroe
+### Actualizar contacto [PUT]
+Actualiza los datos de un contacto
 
 + Request (application/json)
-    + Attributes (Superheroe)
+    + Attributes (Contacto)
 
 + Response 200 (application/json)
-    + Attributes (Respuesta Superheroe)
+    + Attributes (Respuesta Contacto)
 
 
-### Borrar superheroe [DELETE]
-Borra los datos registrados de un superheroe
+### Borrar contacto [DELETE]
+Borra un contacto
 
 + Request (application/json)
 
@@ -66,24 +66,33 @@ Borra los datos registrados de un superheroe
 + field: `nombre` (string) - Campo en el cual se produjo el error
 + error: `required` (string) - Que tipo de error se produjo en el campo
 
-## Superheroe (object)
-+ nombre: `Spiderman` (string)
-    Nombre del superhéroe
-+ superpoder: `Volar` (string)
-    Superpoder principal
-+ debilidad: `Kriptonita` (string)
-    Punto débil del superhéroe
-+ ejerciendo: `true` (boolean)
-    Actualmente se encuentra ejerciendo
+## Contacto (object)
++ nombre: `Juan` (string)
+    Nombre del contacto
++ apellido: `Perez` (string)
+    Apellido del contacto
++ telefono: `11223344` (string)
+    Número de teléfono del contacto
++ email: `mi_contacto@gmail.com` (string)
+    E-mail del contacto
++ ciudad: `Remedios de Escalada` (string)
+    Ciudad del contacto
++ provincia: `Buenos Aires` (string)
+    Provincia del contacto
++ pais: `Argentina` (string)
+    País del contacto
 
+## Contacto Unico (Contacto)
++ temperatura: `22.3` (string)
+    Temperatura en la ciudad del contacto
 
-## Respuesta Superheroe (object)
+## Respuesta Contacto (object)
 + status: `ok` (string)
     Mensaje que indica el resultado de la operacion (ok/error)
-+ data (Superheroe)
-    Superheroe guardado/actualizado
++ data (Contacto)
+    Contacto guardado/actualizado
 
-## Listado Superheroes (object)
+## Listado Contactos (object)
 + status: `ok` (string)
     Mensaje que indica el resultado de la operacion (ok/error)
-+ items (array[Superheroe])
++ items (array[Contacto])
